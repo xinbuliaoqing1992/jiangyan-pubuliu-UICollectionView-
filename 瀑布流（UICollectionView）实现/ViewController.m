@@ -11,6 +11,7 @@
 #import "JYCollectionViewCell.h"
 #import "SecondViewController.h"
 #import "JYButton.h"
+#import "MBProgressHUD.h"
 
 //本地一共有17张图片
 int _imageCount = 22;
@@ -44,13 +45,13 @@ int _imageCount = 22;
 //提示Label
 @property (strong, nonatomic) UILabel *alertLabel;
 
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     
     //初始化AlertView
     [self initAlertView];
@@ -87,7 +88,7 @@ int _imageCount = 22;
         _alertView.frame = CGRectMake(JYWindowsWidth/2-110, JYWindowsHeight/2-(JYWindowsHeight/2)/2, 220, JYWindowsHeight/2);
         
     } completion:^(BOOL finished) {
-        
+      
     }];
     
     //初始化输入框
@@ -104,23 +105,38 @@ int _imageCount = 22;
     //初始化确认按钮
     JYButton *currentBtn = [JYButton buttonWithType:UIButtonTypeCustom Frame:CGRectMake(_alertView.frame.size.width/2-30, CGRectGetMaxY(_numberTextField.frame)+25, 60, 30) ButtonTitle:@"确认" ButtonBackgroundColor:[UIColor greenColor] ButtonTitleColor:[UIColor whiteColor] CornerRadius:5.0 ButtonTitleSize:15 andClickJYButtonBlock:^(UIButton *sender) {
         
-        [_numberTextField resignFirstResponder];
-        
-        //自定义列数
-        _columnCount = [_numberTextField.text integerValue];
-        
-        //初始化UI
-        [self initUI];
-        
-        //初始化数据
-        [self initData];
+        if ([_numberTextField.text length] != 0) {
+            
+            [_numberTextField resignFirstResponder];
+            
+            //自定义列数
+            _columnCount = [_numberTextField.text integerValue];
+            
+            //初始化UI
+            [self initUI];
+            
+            //初始化数据
+            [self initData];
+            
+        } else {
+            [self showMBProgressHUD:@"请输入列数"];
+            
+        }
 
-        
     }];
     
     [_alertView addSubview:currentBtn];
     
   }
+
+//初始化缺省提示
+- (void)showMBProgressHUD:(NSString *)showText {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = showText;
+    hud.mode = MBProgressHUDModeText;
+    [hud hide:YES afterDelay:1];
+}
+
 
 //初始化各项数据
 - (void)initData {
@@ -182,6 +198,14 @@ int _imageCount = 22;
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     //输入时对缺省文字的处理
     if ([textField.text length] >= 1 || [string integerValue] == 0 || [string integerValue] > 5) {
+        
+        if ([string integerValue] == 0) {
+            [self showMBProgressHUD:@"不可以输入0"];
+        } else if ([string integerValue] > 5) {
+            [self showMBProgressHUD:@"列数需小于5"];
+
+        }
+        
         return NO;
     }
     
