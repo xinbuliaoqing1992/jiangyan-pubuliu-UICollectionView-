@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A92CA901C9A948D00C1BE88 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A92CA8F1C9A948D00C1BE88 /* MBProgressHUD.m */; };
+		1A92CA941C9AA12000C1BE88 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A92CA931C9AA12000C1BE88 /* MBProgressHUD.m */; };
 		1A98BE0B1C99A10D0045FB0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A98BE0A1C99A10D0045FB0C /* main.m */; };
 		1A98BE0E1C99A10D0045FB0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A98BE0D1C99A10D0045FB0C /* AppDelegate.m */; };
 		1A98BE111C99A10D0045FB0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A98BE101C99A10D0045FB0C /* ViewController.m */; };
@@ -40,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A92CA8E1C9A948D00C1BE88 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		1A92CA8F1C9A948D00C1BE88 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		1A92CA921C9AA12000C1BE88 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		1A92CA931C9AA12000C1BE88 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		1A98BE061C99A10D0045FB0C /* 瀑布流（UICollectionView）实现.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "瀑布流（UICollectionView）实现.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A98BE0A1C99A10D0045FB0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A98BE0C1C99A10D0045FB0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,11 +94,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A92CA8D1C9A948D00C1BE88 /* MBProgressHUD */ = {
+		1A92CA911C9AA12000C1BE88 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				1A92CA8E1C9A948D00C1BE88 /* MBProgressHUD.h */,
-				1A92CA8F1C9A948D00C1BE88 /* MBProgressHUD.m */,
+				1A92CA921C9AA12000C1BE88 /* MBProgressHUD.h */,
+				1A92CA931C9AA12000C1BE88 /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 		1A98BE3C1C99A37B0045FB0C /* 三方库 */ = {
 			isa = PBXGroup;
 			children = (
-				1A92CA8D1C9A948D00C1BE88 /* MBProgressHUD */,
+				1A92CA911C9AA12000C1BE88 /* MBProgressHUD */,
 				1A98BE4D1C99CD440045FB0C /* JYButton */,
 				1A98BE3E1C99A37B0045FB0C /* JYCollectionViewCell */,
 				1A98BE3F1C99A37B0045FB0C /* JYFlowLayout */,
@@ -344,7 +344,7 @@
 				1A98BE451C99A39A0045FB0C /* JYCollectionViewCell.m in Sources */,
 				1A98BE0E1C99A10D0045FB0C /* AppDelegate.m in Sources */,
 				1A98BE0B1C99A10D0045FB0C /* main.m in Sources */,
-				1A92CA901C9A948D00C1BE88 /* MBProgressHUD.m in Sources */,
+				1A92CA941C9AA12000C1BE88 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
