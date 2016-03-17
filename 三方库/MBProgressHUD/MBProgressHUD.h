@@ -1,9 +1,8 @@
-//
+// 三方库
 //  MBProgressHUD.h
 //  Version 0.9.2
 //  Created by Matej Bukovinski on 2.4.09.
 //
-
 // This code is distributed under the terms and conditions of the MIT license. 
 
 // Copyright (c) 2009-2015 Matej Bukovinski
