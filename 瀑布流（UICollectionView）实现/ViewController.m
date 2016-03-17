@@ -119,6 +119,7 @@ int _imageCount = 22;
             [self initData];
             
         } else {
+            
             [self showMBProgressHUD:@"请输入列数"];
             
         }
@@ -129,7 +130,7 @@ int _imageCount = 22;
     
   }
 
-//初始化缺省提示
+//显示缺省提示
 - (void)showMBProgressHUD:(NSString *)showText {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = showText;
